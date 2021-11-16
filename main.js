@@ -63,11 +63,22 @@ contenedor.style.background = 'red';
 contenedor.style.width = '400px';
 contenedor.style.height = '400px';
 
+contenedor.addEventListener("click", ()=> contenedor.style.background = 'green');
 boton1.innerHTML = 'Soy un boton';
 boton2.innerHTML = 'Soy otro boton';
 
 contenedor.appendChild(boton1);
 contenedor.appendChild(boton2);
+
+boton1.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    console.log("Boton 1");
+});
+
+boton2.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    console.log("Boton 2");
+});
 
 document.body.appendChild(contenedor);
 
