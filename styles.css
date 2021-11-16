@@ -1,0 +1,11 @@
+.ocultar{
+    display: none;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+    width: 30%;
+    height: 30%;
+}
